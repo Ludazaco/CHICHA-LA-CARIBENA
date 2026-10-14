@@ -21,8 +21,8 @@ export default function ConnectionBadge({ pendientes = 0 }: { pendientes?: numbe
   const online = useOnline()
 
   const style = online
-    ? 'bg-teal-100 text-teal-800 dark:bg-teal-950 dark:text-teal-300'
-    : 'bg-rose-100 text-rose-800 dark:bg-rose-950 dark:text-rose-300'
+    ? 'bg-aqua-100 text-aqua-800 dark:bg-aqua-950 dark:text-aqua-300'
+    : 'bg-crimson-100 text-crimson-800 dark:bg-crimson-950 dark:text-crimson-300'
 
   return (
     <div className="flex items-center gap-1.5" aria-live="polite">
@@ -31,7 +31,7 @@ export default function ConnectionBadge({ pendientes = 0 }: { pendientes?: numbe
         {online ? 'En línea' : 'Sin conexión'}
       </span>
       {pendientes > 0 && (
-        <span className="inline-flex items-center gap-1 rounded-full bg-amber-100 px-2.5 py-1 text-xs font-medium text-amber-800 dark:bg-amber-950 dark:text-amber-300">
+        <span className="inline-flex items-center gap-1 rounded-full bg-gold-100 px-2.5 py-1 text-xs font-medium text-gold-800 dark:bg-gold-950 dark:text-gold-300">
           <RefreshCw className="size-3.5" aria-hidden="true" />
           {pendientes} por sincronizar
         </span>

@@ -32,10 +32,10 @@ export default function SalesChart({ data }: { data: DiaVentas[] }) {
               x2={W}
               y1={y(t)}
               y2={y(t)}
-              className="stroke-stone-200 dark:stroke-stone-800"
+              className="stroke-slate-200 dark:stroke-slate-800"
               strokeWidth={1}
             />
-            <text x={padL - 6} y={y(t) + 3} textAnchor="end" className="fill-stone-500 text-[10px]">
+            <text x={padL - 6} y={y(t) + 3} textAnchor="end" className="fill-slate-500 text-[10px]">
               {compact(t)}
             </text>
           </g>
@@ -49,8 +49,8 @@ export default function SalesChart({ data }: { data: DiaVentas[] }) {
           return (
             <g key={d.date}>
               <title>{`${dm(d.date)} · Contado ${money(d.contado)} · Crédito ${money(d.credito)}`}</title>
-              <rect x={x} y={yContado} width={w} height={y(0) - yContado} rx={2} className="fill-orange-500" />
-              <rect x={x} y={yTotal} width={w} height={yContado - yTotal} rx={2} className="fill-teal-500" />
+              <rect x={x} y={yContado} width={w} height={y(0) - yContado} rx={2} className="fill-brand-500" />
+              <rect x={x} y={yTotal} width={w} height={yContado - yTotal} rx={2} className="fill-gold-500" />
             </g>
           )
         })}
@@ -61,19 +61,19 @@ export default function SalesChart({ data }: { data: DiaVentas[] }) {
             x={padL + i * bw + bw / 2}
             y={H - 6}
             textAnchor={i === 0 ? 'start' : i === data.length - 1 ? 'end' : 'middle'}
-            className="fill-stone-500 text-[10px]"
+            className="fill-slate-500 text-[10px]"
           >
             {dm(data[i].date)}
           </text>
         ))}
       </svg>
 
-      <figcaption className="mt-2 flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-stone-500 dark:text-stone-400">
+      <figcaption className="mt-2 flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-slate-500 dark:text-slate-400">
         <span className="inline-flex items-center gap-1.5">
-          <span className="size-2.5 rounded-sm bg-orange-500" /> Contado
+          <span className="size-2.5 rounded-sm bg-brand-500" /> Contado
         </span>
         <span className="inline-flex items-center gap-1.5">
-          <span className="size-2.5 rounded-sm bg-teal-500" /> Crédito
+          <span className="size-2.5 rounded-sm bg-gold-500" /> Crédito
         </span>
       </figcaption>
     </figure>

@@ -1,6 +1,7 @@
 import type { ReactElement } from 'react'
 import { Navigate, Route, Routes } from 'react-router-dom'
 import Layout from './components/Layout'
+import Ajustes from './pages/Ajustes'
 import Dashboard from './pages/Dashboard'
 import Placeholder from './pages/Placeholder'
 import { useRole } from './lib/role'
@@ -73,16 +74,7 @@ export default function App() {
           path="ajustes"
           element={
             <AdminOnly>
-              <Placeholder
-                title="Ajustes"
-                fase="Fase 1"
-                descripcion="Configuración del negocio y usuarios."
-                puntos={[
-                  'Usuarios y roles (Admin / Vendedor)',
-                  'Añadir más vendedores',
-                  'Umbral de alerta de vencimiento y stock mínimo',
-                ]}
-              />
+              <Ajustes />
             </AdminOnly>
           }
         />

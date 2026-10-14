@@ -1,20 +1,72 @@
 @import "tailwindcss";
 
+/* Paleta institucional extraída del logotipo de La Caribeña Bebidas:
+   brand = azul del banner, aqua = turquesa, gold = dorado, crimson = rojo. */
+@theme {
+  --color-brand-50: #f5f6fa;
+  --color-brand-100: #d9e0ee;
+  --color-brand-200: #bac8e5;
+  --color-brand-300: #9cb1da;
+  --color-brand-400: #7f99d0;
+  --color-brand-500: #6282c5;
+  --color-brand-600: #456bba;
+  --color-brand-700: #395899;
+  --color-brand-800: #2c4477;
+  --color-brand-900: #203156;
+  --color-brand-950: #131e34;
+
+  --color-aqua-50: #f3fbfc;
+  --color-aqua-100: #c7edf1;
+  --color-aqua-200: #92e6f0;
+  --color-aqua-300: #63dbea;
+  --color-aqua-400: #33cfe3;
+  --color-aqua-500: #1bb2c5;
+  --color-aqua-600: #179aaa;
+  --color-aqua-700: #14818f;
+  --color-aqua-800: #106974;
+  --color-aqua-900: #0c515a;
+  --color-aqua-950: #09393f;
+
+  --color-gold-50: #fdfaf2;
+  --color-gold-100: #f7edd2;
+  --color-gold-200: #fae4a9;
+  --color-gold-300: #f8d986;
+  --color-gold-400: #f6ce62;
+  --color-gold-500: #f4c137;
+  --color-gold-600: #efb20e;
+  --color-gold-700: #c4920b;
+  --color-gold-800: #997209;
+  --color-gold-900: #6e5206;
+  --color-gold-950: #443204;
+
+  --color-crimson-50: #fdf2f2;
+  --color-crimson-100: #f8cccc;
+  --color-crimson-200: #fc9d9d;
+  --color-crimson-300: #fb7474;
+  --color-crimson-400: #f94a4a;
+  --color-crimson-500: #f82121;
+  --color-crimson-600: #e80707;
+  --color-crimson-700: #bf0606;
+  --color-crimson-800: #960505;
+  --color-crimson-900: #6e0303;
+  --color-crimson-950: #450202;
+}
+
 @layer base {
   html {
     -webkit-tap-highlight-color: transparent;
   }
   body {
-    @apply bg-stone-50 text-stone-900 antialiased dark:bg-stone-950 dark:text-stone-100;
+    @apply bg-slate-50 text-slate-900 antialiased dark:bg-slate-950 dark:text-slate-100;
     font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   }
 }
 
 @layer components {
   .card {
-    @apply rounded-2xl border border-stone-200 bg-white p-4 shadow-sm dark:border-stone-800 dark:bg-stone-900;
+    @apply rounded-2xl border border-slate-200 bg-white p-4 shadow-sm dark:border-slate-800 dark:bg-slate-900;
   }
   .card-title {
-    @apply text-sm font-semibold text-stone-700 dark:text-stone-200;
+    @apply text-sm font-semibold text-slate-700 dark:text-slate-200;
   }
 }

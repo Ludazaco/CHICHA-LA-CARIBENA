@@ -1,6 +1,10 @@
-# Chicha La Caribeña — App de gestión (PWA)
+# La Caribeña Bebidas — App de gestión (PWA)
 
 Esqueleto de la aplicación: PWA responsive con dashboard (Admin y Vendedor) usando **datos de ejemplo**.
+
+**Identidad:** los colores salen del logotipo (azul `#456bba`, turquesa `#1bb2c5`, dorado `#f6ce62`, rojo `#f82121`)
+y están definidos como escalas `brand`, `aqua`, `gold` y `crimson` en `src/index.css`. El logotipo original está
+en `public/logo.jpg` (también origen de los iconos de la PWA).
 
 **Stack:** React 18 + TypeScript + Vite, Tailwind CSS v4, vite-plugin-pwa, Supabase (cliente listo, aún sin usar).
 
@@ -33,7 +37,12 @@ Las rutas de la SPA ya están resueltas con `vercel.json` y `public/_redirects`.
 - Dashboard Vendedor: nueva venta, mi caja, stock disponible, lote sugerido (FEFO). Sin costos ni utilidades.
 - Indicador de conexión (en línea / sin conexión).
 - Selector **Admin / Vendedor** en el encabezado: solo para demostración; lo reemplaza el login real.
-- Módulos Ventas, Inventario, Clientes, Gastos y Ajustes como pantallas "en construcción".
+- **Ajustes** (solo Admin): personalización (nombre del negocio, logotipo, datos de la empresa), alertas
+  (umbral de vencimiento y stock mínimo) y gestión de vendedores (añadir, activar/desactivar). Se guardan en el
+  dispositivo (localStorage) y la app los usa al instante. Con Supabase (Fase 1) pasarán a la base de datos.
+  El logotipo subido cambia lo que se ve dentro de la app; el ícono instalado en el celular sale de
+  `public/pwa-*.png` y cambia al publicar una nueva versión.
+- Ventas, Inventario, Clientes y Gastos como pantallas "en construcción".
 
 ## Estructura
 

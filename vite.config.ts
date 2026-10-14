@@ -9,13 +9,13 @@ export default defineConfig({
     tailwindcss(),
     VitePWA({
       registerType: 'autoUpdate',
-      includeAssets: ['icon.svg', 'apple-touch-icon.png'],
+      includeAssets: ['favicon-64.png', 'apple-touch-icon.png', 'logo.jpg'],
       manifest: {
-        name: 'Chicha La Caribeña',
-        short_name: 'Chicha',
+        name: 'La Caribeña Bebidas',
+        short_name: 'La Caribeña',
         description: 'Gestión de inventarios, clientes, ventas y caja.',
-        theme_color: '#c2410c',
-        background_color: '#fafaf9',
+        theme_color: '#456bba',
+        background_color: '#ffffff',
         display: 'standalone',
         start_url: '/',
         lang: 'es',
@@ -27,7 +27,7 @@ export default defineConfig({
       },
       workbox: {
         navigateFallback: '/index.html',
-        globPatterns: ['**/*.{js,css,html,svg,png,ico,woff2}'],
+        globPatterns: ['**/*.{js,css,html,svg,png,jpg,ico,woff2}'],
       },
     }),
   ],
